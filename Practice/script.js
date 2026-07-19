@@ -15,9 +15,13 @@ Array.from(boxes).forEach(e=>{
     e.style.color = getRandomColor()
 })
 
-box1.onclick=()=>{
-    console.log("box1 clicked");
+const handler=()=>{
+    console.log("You clicked box 1.");
 }
+
+box1.addEventListener("click",handler);
+
+box1.removeEventListener("click",handler);
 
 box2.onclick=()=>{
     console.log("box2 clicked");
