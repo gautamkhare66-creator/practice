@@ -71,5 +71,16 @@ galaxyS26.videoCall();
 galaxyS26.multimedia();
 
 
+console.log("Error Handling-----");
+
+try{
+    let a=prompt("Enter your name: ");
+    console.log("Hello "+b);
+}catch(error){
+    console.log("Error:"+error.message);
+}finally{
+    console.log("Execution completed.");
+    console.log("Chapter completed.");
+}
 
 
