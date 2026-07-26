@@ -1,19 +1,17 @@
-#container{
-    height: 100px;
+#btn_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+
+#btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    
-}   
-
-.box{
-    display: flex;
-    height: 100px;
+    height: 30px;
     width: 100px;
-    border: 2px solid black;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
+
 }
