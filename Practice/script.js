@@ -1,13 +1,19 @@
-function greet(name) {
-    console.log("Hello, " + name + "!");
+function number(num,nextNum){
+    setTimeout(() => {
+        console.log(num);
+        if(nextNum!=null){
+            nextNum();
+        }
+    }, 5000);
 }
 
-greet("Jack");
-
-setTimeout(() => {
-    greet("Gautam");
-}, 5000);
-
-greet("Lucifer");
-
+number(1,()=>{
+    number(2,()=>{
+        number(3,()=>{
+            number(4,()=>{
+                number(5,null);
+            });
+        });
+    });
+});
 
