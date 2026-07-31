@@ -1,19 +1,22 @@
-function number(num,nextNum){
-    setTimeout(() => {
-        console.log(num);
-        if(nextNum!=null){
-            nextNum();
-        }
-    }, 5000);
+function getData(n){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Data received: " + n);
+            resolve(n);
+        },5000);
+    });
 }
 
-number(1,()=>{
-    number(2,()=>{
-        number(3,()=>{
-            number(4,()=>{
-                number(5,null);
-            });
-        });
-    });
-});
+(async function (){
+    let n=1;
+    console.log("Processing data: " + n);
+    await getData(n);
+    console.log("Data processed: " + n);
+    await getData(n+1);
+    console.log("Data processed: " + (n+1));
+    await getData(n+2);
+    console.log("Data processed: " + (n+2));
+})();
+
+
 
